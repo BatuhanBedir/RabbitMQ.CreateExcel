@@ -45,7 +45,6 @@ public class ProductController : Controller
         _rabbitMQPublisher.Publish(new Shared.CreateExcelMessage()
         {
             FileId = userFile.Id,
-            UserId = user.Id,
         });
 
         TempData["StartCreatingExcel"] = true;
